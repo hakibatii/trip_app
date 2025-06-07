@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277122215891",
+    "project_id": "tripapp-1f86c",
+    "storage_bucket": "tripapp-1f86c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277122215891:android:5dd601e7f06e7ab2bcc926",
+        "android_client_info": {
+          "package_name": "com.example.trip_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoyOamgTcn-PIboy4AxFgz-kWsr9Vi6c4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
