@@ -40,29 +40,6 @@ class LoginScreen extends StatelessWidget {
     }
   }
 
-  Future<void> registerTempAccount() async {
-    try {
-      final response = await http.post(
-        Uri.parse("https://hakibatii.000webhostapp.com/api/register"),
-        body: {
-          "email": "Ibork802@gmail.com",
-          "password": "123456789",
-          "name": "testuser", // إذا API يتطلب اسم
-        },
-      );
-
-      final data = json.decode(response.body);
-
-      if (data["status"] == true) {
-        Get.snackbar("نجاح", "تم إنشاء الحساب بنجاح!");
-      } else {
-        Get.snackbar("خطأ", data["message"] ?? "فشل إنشاء الحساب");
-      }
-    } catch (e) {
-      Get.snackbar("خطأ", "تعذر الاتصال بالخادم");
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,11 +62,6 @@ class LoginScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: login,
               child: Text("دخول"),
-            ),
-            SizedBox(height: 12),
-            ElevatedButton(
-              onPressed: registerTempAccount,
-              child: Text("📥 تسجيل حساب جديد (مؤقت)"),
             ),
           ],
         ),

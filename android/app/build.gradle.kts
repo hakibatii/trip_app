@@ -1,17 +1,15 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    // يجب أن يكون بعد الإضافات السابقة
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
-    // ✅ إضافة هذا السطر لتفعيل Firebase
-    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.example.trip_app"
     compileSdk = flutter.compileSdkVersion
 
-    // ✅ حل مشكلة NDK المطلوبة من بعض المكتبات
+    // ✅ أضفنا هذا السطر لحل مشكلة NDK:
     ndkVersion = "27.0.12077973"
 
     compileOptions {
