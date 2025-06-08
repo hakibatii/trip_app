@@ -1,12 +1,17 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("com.google.gms.google-services") // من Firebase
+    id("kotlin-android")
+    // يجب أن يكون بعد الإضافات السابقة
+    id("dev.flutter.flutter-gradle-plugin")
+    // ✅ إضافة هذا السطر لتفعيل Firebase
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.example.trip_app"
     compileSdk = flutter.compileSdkVersion
+
+    // ✅ حل مشكلة NDK المطلوبة من بعض المكتبات
     ndkVersion = "27.0.12077973"
 
     compileOptions {
